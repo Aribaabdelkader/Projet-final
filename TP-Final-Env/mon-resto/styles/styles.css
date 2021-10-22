@@ -1,0 +1,378 @@
+/* SETTINGS */
+
+:root {
+    --black: #161616;
+    --white: #ffffff;
+    --xlight-gray: #f4f4f4;
+    --light-gray: #F7D358;
+    --gray: Silver;
+}
+
+
+/* GENERIC */
+ * {
+   box-sizing: border-box;
+   font-family: osawald,monospace;
+
+}
+
+
+
+.logo {
+  color: #B18904;
+  font-weight: bold;
+  font-size: 5em;
+  text-decoration: none;margin: 20px;
+
+}
+
+
+
+
+.contact{
+  font-size: 2em;
+}
+
+
+
+.contactform {
+
+
+    margin: auto;
+    width: 80%;
+    border: 9px solid gray;
+    padding: 50px;
+
+}
+
+
+.inputboite {
+
+width: 15%;
+
+}
+
+
+
+
+
+/*---------------------------*/
+
+/*  Dropdown
+    src : https://css-tricks.com/solved-with-css-dropdown-menus/
+*/
+
+ul.menu {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    align-items:flex-end;
+    height: 70%;
+}
+
+li {
+  /*  background: Gainsboro;*/
+    display: block;
+    cursor: pointer;
+    padding: 20px 30px;
+    position: relative;
+    text-decoration: none;
+    transition: background-color .3s ease;
+}
+
+li:hover {
+    background:#5F4C0B;
+}
+
+li a,
+li:hover ul li a {
+    color: #000;
+    transition: color .3s ease;
+    white-space: nowrap;
+}
+
+li:hover a,
+li:hover ul li:hover a {
+    color: white;
+}
+
+ul li ul.dropdown {
+    display:none;
+    left: 0;
+    margin-top: calc(20px + 1.1em + 20px);
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+    width: fit-content;
+    z-index: 1;
+}
+
+ul li:hover > ul.dropdown,
+ul li:focus-within > ul.dropdown,
+ul li ul.dropdown:hover {
+    display: block;
+}
+
+ul li ul.dropdown li {
+    min-width: 100%;
+    width: fit-content;
+}
+
+li:focus-within a {
+    outline: none;
+}
+
+
+/* ----------------------------*/
+
+
+
+
+
+
+
+/* ÉLÉMENTS */
+body {
+  margin:0 ;
+  padding: 0;
+}
+
+
+header {
+  align-items: center;
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  min-height: 300px;
+
+}
+
+footer {
+    padding: 2px 0;
+}
+
+
+
+
+h1,h2 {
+  margin: 0;
+  font-size: 4vw;
+}
+
+
+a {
+  color: var(--black);
+  text-decoration: none;
+
+}
+
+
+
+ul,li {
+  list-style-type: none;
+  padding: 10;
+  margin: 30;
+
+}
+
+
+
+
+/* CLASS */
+
+
+/* TYPO*/
+
+.title--primary {
+  font-size: 8vw;
+    z-index: 5;
+}
+
+.title--secondary {
+  font-size: 5vw;
+  text-align: center;
+
+}
+
+.title--secondar2 {
+  font-size: 5vw;
+  text-align: center;
+
+}
+
+
+.title--propre-Restaurant {
+  font-size: 5vw;
+  text-align:justify;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15em
+
+
+}
+
+
+/* BG background color */
+
+.bloc--light-gray {
+  background-color: var(--light-gray);
+}
+
+/* Flex */
+
+.flex {
+  display: flex;
+}
+
+.flex--center-x {
+  justify-content:center;
+}
+
+
+.flex--align-center {
+  align-items: center;
+}
+
+
+
+/* header */
+
+.header__logo {
+  left:0;
+  background-color:var(--light-gray);
+  padding: 25px 0;
+  position: fixed;
+  top:0;
+  width: 100%;
+}
+
+/* Footer*/
+
+.footer__nav__item + .footer__nav__item {
+  margin-left: 10px;
+}
+
+
+
+.header__tagline {
+  background-color: var(--light-gray);
+}
+
+
+/* wrapper */
+
+.wrapper {
+  padding:3vw;
+}
+
+
+/* Grid*/
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+
+.grid__item {
+  margin-top: 7vw;
+  width: 31%;
+
+}
+
+
+
+
+.grid__item__bloc-img {
+  /*height: 50px;*/
+  border-radius: 0px;
+  padding-bottom: 85%;
+  width: 80%;
+}
+
+.grid__item__bloc-img10 {
+  /*height: 50px;*/
+  border-radius: 0px;
+  padding-bottom: 35%;
+  width: 35%;
+  vertical-align: middle;
+}
+
+/* padding */
+
+.my--top {
+  margin-top: 9vw;
+}
+
+
+
+/* Blocs */
+
+.bloc--half {
+  width: 50%;
+}
+
+
+
+
+.bloc--un-tier {
+    width: 40%;
+}
+
+.bloc--deux-tier {
+
+    width: 60%;
+}
+
+
+
+/* Img Video */
+
+.bloc--img-rond {
+
+    padding-bottom: 100%;
+    width: 100%;
+
+}
+
+.bloc--img-rond2 {
+
+    padding-bottom: 130%;
+    width: 108%;
+
+}
+
+
+
+
+.bloc--img,
+.bloc--video {
+    position: relative;
+}
+
+
+
+.bloc--img::before {
+    content: "";
+    background-color: var(--gray);
+    height: 1px;
+    left: 25%;
+    position: absolute;
+    top: 50%;
+    transform: rotate(-45deg) translateY(-50%);
+    width: 50%;
+    z-index: 0;
+}
+
+.bloc--img::after {
+    content: "";
+    background-color: var(--gray);
+    height: 1px;
+    left: 25%;
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg)  translateY(-50%);
+    width: 50%;
+    z-index: 0;
+}

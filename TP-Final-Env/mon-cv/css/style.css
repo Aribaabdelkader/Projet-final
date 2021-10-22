@@ -1,0 +1,160 @@
+
+
+
+
+body{
+  margin: auto;
+  font-family:'New Tegomin', serif;
+  background-color:#f1f1f1;
+
+
+}
+
+h1 {
+  text-align: center;
+}
+
+
+
+section{
+
+  list-style-type: none;
+  margin:80px;
+  padding:80px;
+  color: black
+
+}
+
+ul{
+list-style-type: none;
+margin:80px;
+padding: 0px;
+background-color: #f1f1f1;
+position: fixed;
+top: 0;
+width: 100%
+}
+
+li{
+  float: left;
+}
+
+li a{
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 60px 60px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+li a:hover, .dropdown:hover {
+  background-color: #555;
+  color: #FFFFFFFF;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolut;
+  background-color: #f9f9f9;
+  min-width: 140px;
+
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 30px 30px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+      background-color: #555;
+      color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.floatRight{
+  float: right;
+}
+
+
+wrapper{
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > *{
+   padding: 10px;
+   flex: 100%;
+}
+
+
+
+.footer{
+  background: lightgreen;
+  text-align:center;
+}
+
+
+
+.main{
+
+  text-align:left;
+  background:#f1f1f1;
+  font-size: 20px;
+}
+
+.Image{
+
+image-orientation:right;
+
+
+}
+
+
+.aside-1 {
+  text-align:center;
+  background: gold;
+}
+
+
+
+.aside-2 {
+  text-align:center;
+  background: hotpink;
+
+}
+
+@media all and (min-width: 600px){
+ .aside {
+   flex: 1 0 0;
+  }
+
+}
+
+@media all and (min-width: 800px){
+  .main{
+    flex: 3 0;
+  }
+  .aside-1 {
+    order: 1;
+  }
+  .main {
+    order: 2;
+  }
+  .aside-2 {
+    order: 3;
+  }
+  .footer {
+    order: 4;
+  }
+
+}
